@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "akash-terraform"
+    bucket = "akash-terraform-file"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }

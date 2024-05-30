@@ -2,14 +2,6 @@ provider "aws" {
     region = var.region
 }
 
-terraform {
-  backend "s3" {
-    bucket = "terraformstatefile.tf"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
-  }
-}
-
 # to create a VPC
 resource "aws_vpc" "demo_vpc" {
   cidr_block = "10.10.0.0/16"

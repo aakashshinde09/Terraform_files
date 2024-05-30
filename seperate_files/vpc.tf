@@ -5,6 +5,10 @@ provider "aws" {
 # to create a VPC
 resource "aws_vpc" "demo_vpc" {
   cidr_block = "10.10.0.0/16"
+
+  tags = {
+    Name = "Demo-vpc"
+  }
 }
 
 # to create a subnet

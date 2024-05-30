@@ -4,4 +4,8 @@ resource "aws_instance" "demo_instance" {
   instance_type = "t2.micro"
   subnet_id = aws_subnet.demo_subnet.id
   vpc_security_group_ids = [ aws_security_group.demo_sg.id ]
+
+  tags = {
+    Name = "demo-instance"
+  }
 }

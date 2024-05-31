@@ -3,8 +3,9 @@ provider "aws" {
 }
 
 resource "aws_key_pair" "akash_key" {
-  key_name = "akash-key"
-  public_key = file("~/.ssh/authorized_keys")
+    key_name = "akash-key"
+    public_key = file("~/.ssh/authorized_keys") 
+    # The above is the path where our public key is stored
 }
 
 resource "aws_security_group" "akash_sg" {
